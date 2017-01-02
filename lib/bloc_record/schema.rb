@@ -1,5 +1,6 @@
 require 'sqlite3'
-require_relative 'utility.rb'
+require 'bloc_record/utility'
+require 'bloc_record/connection'
 
 module Schema
 	def table
@@ -21,6 +22,7 @@ module Schema
 				@schema[col["name"]] = col["type"]
 			end
 		end
+		return @schema
 	end
 
 	def count

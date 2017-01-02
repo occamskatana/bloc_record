@@ -1,6 +1,7 @@
 require 'sqlite3'
-require_relative '../bloc_record.rb'
-
+require 'bloc_record'
 module Connection
-	@connection ||= SQLite3::Database.new(BlocRecord.database_filename)
+	def connection
+		@connection ||= SQLite3::Database.new(BlocRecord.database_filename)
+	end
 end

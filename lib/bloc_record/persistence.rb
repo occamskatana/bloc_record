@@ -1,5 +1,5 @@
 require 'sqlite3'
-require_relative 'schema'
+require 'bloc_record/schema'
 
 module Persistence
 
